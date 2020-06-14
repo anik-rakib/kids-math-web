@@ -1,0 +1,186 @@
+html{
+    height: 100%;
+    background: radial-gradient(circle,#e01313,#ccc);
+    background: url(image/background.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    width: 250px;
+    border-radius: 75%;
+    height: 250px;
+/*    margin-bottom: 25px;*/
+    margin-top: 100px;
+    margin-left: 175px;
+    animation: run 1s linear infinite;
+    animation-direction: alternate;
+    
+}
+@keyframes run{
+    form{transform: translate(50px);}
+    to{transform: translate(-50px);}
+}
+#type{
+    color: white;
+    text-align:center;
+    padding: 11px;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    background: #000000;
+}
+#container{
+    height: 400px;
+    width: 550px;
+    background-color: #9DD2EA;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px #009de4;
+    position: relative;
+}
+#score{
+    background-color: #F1FF92;
+    color: #888E5F;
+    padding: 11px;
+    position: absolute;
+    left: 475px;
+    margin: -5px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px #9da853;
+    font-family: 'Montserrat', sans-serif;
+}
+#correct{
+    position: absolute;
+    left: 250px;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+#wrong{
+    position: absolute;
+    left: 250px;
+    background-color: #de401a;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+#question{
+    width: 450px;
+    height: 100px;
+    margin: 50px auto 10px auto;
+    background-color: #9DA0EA;
+    box-shadow: 0px 4px #535aa8;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color: #B48109;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0px 4px #8153a8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+#choices{
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+}
+.box{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+.box:hover,#startreset:hover{
+    background-color: #27aadb;
+    color: white;
+    box-shadow: 0px 4px #6b54d3;
+}
+.box:active,#startreset:active{
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
+#box4{
+    margin-right: 0px;
+}
+#startreset{
+    width: 100px;
+    padding: 5px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    transition: all 0.2s;
+}
+#time{
+    width: 175px;
+    padding: 5px;
+    position: absolute;
+    top: 396px;
+    left: 395px;
+    background-color: rgba(181,235,36,0.8);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+}
+#gameover{
+    height: 225px;
+    width: 485px;
+    padding: 5px;
+    background: linear-gradient(#6e4c7e,#724140);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    border-radius: 10px;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+}
+#showanswer{
+    height: 280px;
+    width: 455px;
+    padding: 5px;
+    background: linear-gradient(#af67d0,#000000);
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 80px;
+    left: 60px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+}
+#answershow{
+    display: none;
+}
+#column1,#column2,#column3{
+    display: flex;
+    flex: 1;
+    padding: 0px 10px 10px 10px;
+}
